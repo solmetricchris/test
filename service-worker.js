@@ -11,8 +11,8 @@ self.addEventListener('install', function (event) {
     console.log('SW installed!');
 
     return cache.addAll([
-      '/index.html',
-      '/supertest.js'
+      'index.html',
+      'supertest.js'
     ]);
   }));
 });
