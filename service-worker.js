@@ -11,9 +11,8 @@ self.addEventListener('install', function (event) {
     console.log('SW installed!');
 
     return cache.addAll([
-      '/',
       '/index.html',
-      '/js/Gemini.min.js'
+      '/js/supertest.js'
     ]);
   }));
 });
