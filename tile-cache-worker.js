@@ -31,6 +31,12 @@ self.addEventListener('fetch', function (event) {
 
     event.respondWith(caches.match(event.request).then(function (response) {
       console.log('tile fetched from cache ', response);
+            if(response) {
+                console.log("found!");
+                return response;
+            } else {
+                console.log('unable to fetch tile from cache go get it elsewhere! ', response);
+            }
       return response || new Response('Nothing in the cache for this request');
     }, function(response) {
             console.log('unable to fetch tile from cache ', response);
